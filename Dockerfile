@@ -5,7 +5,7 @@ RUN mkdir /ESIS/L4TLC
 
 RUN mkdir /ESIS/L4MSI
 RUN apk update
-RUN apk add apache2-2.4.57-r0
+RUN apk add apache2
 
 WORKDIR /ESIS/L4RX
 COPY file1.txt /ESIS/L4RX/
