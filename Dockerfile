@@ -1,14 +1,13 @@
 FROM alpine
-RUN mkdir -p /ESIS/L4RX
-RUN mkdir /ESIS/L4DSI
-RUN mkdir /ESIS/L4TLC
-RUN mkdir /ESIS/L4DSI
-RUN mkdir /ESIS/L4MSI
+RUN mkdir -p /ESIS/L4RX-V2
+RUN mkdir /ESIS/L4DSI-V2
+RUN mkdir /ESIS/L4TLC-V2
+RUN mkdir /ESIS/L4DSI-V2
+RUN mkdir /ESIS/L4MSI-V2
 RUN apk update
-RUN apk install apache2-2.4.57-r0
-RUN systemctl start apache2
+RUN apk add apache2
 
-WORKDIR /ESIS/L4RX
-COPY file1.txt /ESIS/L4RX/
-COPY file2.txt /ESIS/L4RX/
+WORKDIR /ESIS/L4RX-V2
+COPY file1.txt /ESIS/L4RX-V1/
+COPY file2.txt /ESIS/L4RX-V2/
 CMD sh
